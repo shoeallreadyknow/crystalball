@@ -1,13 +1,16 @@
 package andriod.landaverdej.crystalball;
 
 import android.app.Activity;
+import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.TextView;
 
 
 public class crystal_ball extends Activity {
+        private SensorManager sensorManager;
+    private float acceleration;
+    private float currentacceleration;
+    private float previousacceleration;
 
     private TextView answerText;
     @Override
@@ -16,7 +19,7 @@ public class crystal_ball extends Activity {
         setContentView(R.layout.activity_crystal_ball);
 
         answerText = (TextView) findViewById(R.id.answerText);
-        answerText.setText("reply is hazy, try again tomorrow");
+        answerText.setText(Predictions.get().getPrediction());
     }
 
 
