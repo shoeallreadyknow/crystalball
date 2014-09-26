@@ -7,6 +7,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.util.FloatMath;
 import android.widget.TextView;
 
 
@@ -19,6 +20,13 @@ public class crystal_ball extends Activity {
     private final SensorEventListener sensorlistener = new SensorEventListener() {
         @Override
         public void onSensorChanged(SensorEvent event) {
+                float x= event.values[0];
+                float y= event.values[1];
+                float z= event.values[2];
+        previousacceleration = currentacceleration;
+            currentacceleration= FloatMath.sqrt(x * x + y * y + z * z);
+            
+
 
         }
 
