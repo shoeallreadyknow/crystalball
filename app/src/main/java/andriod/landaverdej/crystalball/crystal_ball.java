@@ -31,10 +31,11 @@ public class crystal_ball extends Activity {
             acceleration= acceleration * 0.9f + delta;
 
             if(acceleration > 15) {
-                Toast toast = Toast.makeText(getApplication(), "Device has shaken", Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(getApplication(), "YESS!!!", Toast.LENGTH_SHORT);
                 toast.show();
                 MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.crystal_ball);
                 mediaPlayer.start();
+                
             }
 
         }

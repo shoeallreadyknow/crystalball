@@ -8,7 +8,7 @@ public class Predictions {
     private Predictions(){
         answers = new String[]{
           "your wishes will come true",
-                "your wishes will never come true"
+                "YESS!!!"
         };
     }
     public static Predictions get(){
