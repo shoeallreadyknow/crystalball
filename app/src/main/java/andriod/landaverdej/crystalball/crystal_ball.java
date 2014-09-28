@@ -2,6 +2,7 @@ package andriod.landaverdej.crystalball;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -9,6 +10,7 @@ import android.hardware.SensorManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.FloatMath;
+import android.view.Gravity;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,11 +33,11 @@ public class crystal_ball extends Activity {
             acceleration= acceleration * 0.9f + delta;
 
             if(acceleration > 15) {
-                Toast toast = Toast.makeText(getApplication(), "YESS!!!", Toast.LENGTH_SHORT);
-                toast.show();
+
                 MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.crystal_ball);
                 mediaPlayer.start();
-                
+              
+
             }
 
         }
@@ -61,6 +63,7 @@ public class crystal_ball extends Activity {
 
         answerText = (TextView) findViewById(R.id.answerText);
         answerText.setText(Predictions.get().getPrediction());
+
     }
 
     @Override

@@ -2,10 +2,10 @@ package andriod.landaverdej.crystalball;
 
 public class Predictions {
 
-    private static Predictions predictions;
-   private String[] answers;
+    public static Predictions predictions;
+   public String[] answers;
 
-    private Predictions(){
+    public Predictions(){
         answers = new String[]{
           "your wishes will come true",
                 "YESS!!!"
@@ -13,6 +13,7 @@ public class Predictions {
     }
     public static Predictions get(){
         if(predictions == null){
+
             predictions = new Predictions();
         }
         return predictions;

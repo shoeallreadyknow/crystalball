@@ -15,7 +15,7 @@ tools:context=".crystal_ball">
         android:id="@+id/answerText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Justin"
+        android:text="  "
         android:layout_centerInParent="true"
         android:layout_gravity="center"
         android:textStyle="bold" android:textSize="40.0sp"
